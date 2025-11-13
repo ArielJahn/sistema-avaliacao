@@ -9,7 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Infolists; // Importar Infolists
+use Filament\Infolists;
 use Filament\Infolists\Infolist;
 use Filament\Tables\Columns\TextColumn;
 
@@ -17,11 +17,10 @@ class SubmissaoResource extends Resource
 {
     protected static ?string $model = Submissao::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list'; // Ícone opcional
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
 
-    protected static ?string $navigationLabel = 'Respostas'; // Mudar nome no menu
+    protected static ?string $navigationLabel = 'Respostas';
 
-    // Desabilita a criação e edição
     public static function canCreate(): bool
     {
         return false;
@@ -69,7 +68,7 @@ class SubmissaoResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('created_at', 'desc'); // Mostrar mais novas primeiro
+            ->defaultSort('created_at', 'desc');
     }
 
     public static function getRelations(): array
@@ -79,14 +78,11 @@ class SubmissaoResource extends Resource
         ];
     }
 
-    // Note que ajustamos as páginas para incluir 'view' e remover 'create'/'edit'
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListSubmissaos::route('/'),
-            // 'create' => Pages\CreateSubmissao::route('/create'), // Removido
-            'view' => Pages\ViewSubmissao::route('/{record}'), // Adicionado
-            // 'edit' => Pages\EditSubmissao::route('/{record}/edit'), // Removido
+            'view' => Pages\ViewSubmissao::route('/{record}'),
         ];
     }
 }
