@@ -56,7 +56,7 @@ Siga estes passos para configurar o ambiente de desenvolvimento.
 ### 2. Clone o Repositório
 
 ```bash
-# Clone o projeto (substitua pela URL do seu repositório)
+# Clone o projeto
 git clone [[https://seu-repositorio.git/sistema-avaliacao.git](https://seu-repositorio.git/sistema-avaliacao.git)](https://github.com/ArielJahn/sistema-avaliacao.git)
 cd sistema-avaliacao
 
