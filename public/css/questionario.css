@@ -1,0 +1,134 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
+}
+
+.pergunta-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.pergunta-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.pergunta-texto {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.escala-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.escala-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.escala-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.escala-item label {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+}
+
+.escala-item label:hover {
+    border-color: var(--note-color, #999);
+    transform: scale(1.1);
+    box-shadow: 0 0 8px var(--note-color, #999);
+}
+
+.escala-item input[type="radio"]:checked + label {
+    background-color: var(--note-color, #007bff);
+    color: #fff;
+    border-color: var(--note-color, #007bff);
+    transform: scale(1.15);
+    box-shadow: 0 0 4px var(--note-color, #007bff);
+}
+
+.escala-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem;
+    min-height: 120px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.agradecimento {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 3rem 0;
+}
