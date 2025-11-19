@@ -68,14 +68,12 @@ class PerguntaResource extends Resource
                     ->wrap(),
                 IconColumn::make('status')
                     ->icon(fn (string $state): string => match ($state) {
-                        'ativa' => 'heroicon-o-check-circle',
-                        'inativa' => 'heroicon-o-x-circle',
-                        default => 'heroicon-o-question-mark-circle'
+                        '1' => 'heroicon-o-check-circle',
+                        '0' => 'heroicon-o-x-circle',
                     })
                     ->color(fn (string $state): string => match ($state) {
-                        'ativa' => 'success',
-                        'inativa' => 'danger',
-                        default => 'gray'
+                        '1' => 'success',
+                        '0' => 'danger',
                     })
                     ->label('Status'),
                 TextColumn::make('ordem')->sortable()->label('Ordem'),

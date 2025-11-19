@@ -14,4 +14,6 @@
    </div>
 </body>
 
+<script src="{{ asset('js/questionario.js') }}" defer></script>
+
 </html>

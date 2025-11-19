@@ -12,6 +12,7 @@ use Filament\Tables\Table;
 use Filament\Infolists;
 use Filament\Infolists\Infolist;
 use Filament\Tables\Columns\TextColumn;
+use Symfony\Component\Console\Color;
 
 class SubmissaoResource extends Resource
 {
@@ -60,7 +61,8 @@ class SubmissaoResource extends Resource
                     ->relationship('dispositivo', 'nome'),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(), // Ação de Visualizar
+                Tables\Actions\ViewAction::make()
+                    ->color('success'),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
