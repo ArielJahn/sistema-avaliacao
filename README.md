@@ -1,66 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Sistema de Avaliação de Qualidade de Serviços Prestados
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este é um sistema de coleta de feedback de clientes, projetado para ser usado em diversos dispositivos. As avaliações são anônimas e os resultados são visualizados em um painel administrativo para análise gerencial.
 
-## About Laravel
+O projeto é construído com **Laravel**, **Filament v3** e **PostgreSQL**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🖥️ Questionário (Front-End do Cliente)
 
-## Learning Laravel
+* **Formulário Dinâmico:** As perguntas são carregadas do banco de dados com base no setor do dispositivo.
+* **Avaliação por Notas:** Uma escala de 0 (Improvável) a 10 (Muito provável).
+* **Design Interativo:** A escala de notas usa um degradê de cores (vermelho para verde) para feedback visual.
+* **Coleta Anônima:** Nenhuma informação pessoal é solicitada ou armazenada.
+* **Feedback Textual:** Um campo opcional para comentários abertos.
+* **Redirecionamento Automático:** Após o envio, uma tela de "Obrigado" é exibida e redireciona para o formulário após 5 segundos.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ⚙️ Painel Administrativo (Retaguarda)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Painel Seguro:** Construído com Filament, com autenticação de administrador.
+* **Dashboard de Métricas:**
+    * Widget com total de avaliações.
+    * Widget com média geral de notas.
+    * Gráfico de barras com a média de pontuação por setor.
+* **Gerenciamento de Setores:** CRUD completo para criar e editar os setores do estabelecimento (ex: "Recepção", "Caixa", "Vendas").
+* **Gerenciamento de Dispositivos:** CRUD para cadastrar os tablets (ex: "Tablet Recepção") e associá-los a um setor.
+* **Gerenciamento de Perguntas:** CRUD para criar as perguntas e associá-las a um setor específico.
+* **Visualização de Respostas:** Uma lista de todas as submissões recebidas, permitindo ver os detalhes de cada avaliação (notas e feedback).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ Tecnologias Utilizadas
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* **PHP 8.1+**
+* **Laravel 10+**
+* **Filament v3** (Para o painel administrativo)
+* **PostgreSQL** (Banco de dados)
+* **Blade** (Para as views do questionário)
+* **CSS/JS puros** (Para o front-end, separados em arquivos `public/`)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## 🔧 Instalação e Configuração
 
-## Contributing
+Siga estes passos para configurar o ambiente de desenvolvimento.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 1. Pré-requisitos
 
-## Code of Conduct
+* PHP 8.1+
+* Composer (ex: composer install)
+* Servidor PostgreSQL em execução
+* A extensão PHP para PostgreSQL (ex: `sudo apt install php8.1-pgsql`)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 2. Clone o Repositório
 
-## Security Vulnerabilities
+```bash
+# Clone o projeto
+git clone [[https://seu-repositorio.git/sistema-avaliacao.git](https://seu-repositorio.git/sistema-avaliacao.git)](https://github.com/ArielJahn/sistema-avaliacao.git)
+cd sistema-avaliacao
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Arquivo .env
+acesse o arquivo .env e altere as inforações conforme a instância do seu banco
 
-## License
+# Gerar as tabelas e popular o banco com um admin
+php artisan migrate:fresh --seed
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#Acesse: http://localhost:8000/admin e faça login com o seguinte usuário e senha: admin@admin.com | 123
+
+#Para acessar o questionário de dispositivos é necessário informar o parâmetro via URL: com ID 1 (ex: Tablet da Recepção): http://localhost:8000/?dispositivo_id=1
