@@ -9,10 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Infolists;
-use Filament\Infolists\Infolist;
 use Filament\Tables\Columns\TextColumn;
-use Symfony\Component\Console\Color;
 
 class SubmissaoResource extends Resource
 {
@@ -20,6 +17,8 @@ class SubmissaoResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
 
+    protected static ?string $modelLabel = 'Resposta';
+    protected static ?string $pluralModelLabel = 'Respostas';
     protected static ?string $navigationLabel = 'Respostas';
 
     public static function canCreate(): bool

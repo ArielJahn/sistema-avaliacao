@@ -14,7 +14,6 @@ class ViewSubmissao extends ViewRecord
 {
     protected static string $resource = SubmissaoResource::class;
 
-    // Este é o método que adicionamos para mostrar os detalhes
     public function infolist(Infolist $infolist): Infolist
     {
         return $infolist
