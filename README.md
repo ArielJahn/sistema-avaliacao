@@ -57,7 +57,7 @@ Siga estes passos para configurar o ambiente de desenvolvimento.
 
 ```bash
 # Clone o projeto
-git clone [[https://seu-repositorio.git/sistema-avaliacao.git](https://seu-repositorio.git/sistema-avaliacao.git)](https://github.com/ArielJahn/sistema-avaliacao.git)
+git clone https://github.com/ArielJahn/sistema-avaliacao.git
 cd sistema-avaliacao
 
 # Arquivo .env
@@ -65,6 +65,9 @@ acesse o arquivo .env e altere as inforações conforme a instância do seu banc
 
 # Gerar as tabelas e popular o banco com um admin
 php artisan migrate:fresh --seed
+
+# Para iniciar o servidor
+php artisan serve 
 
 #Acesse: http://localhost:8000/admin e faça login com o seguinte usuário e senha: admin@admin.com | 123
 
